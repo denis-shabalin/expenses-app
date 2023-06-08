@@ -4,9 +4,41 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="resources/icon.png" type="image/x-icon">
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="index.css">
    <title>Expenses App</title>
 </head>
 <body>
-   
+   <h1>Приложение для учета расходов</h1>
+   <div class="expenses">
+      <div class="expensesInput">
+         <div class="moneyInput rub">
+            <input
+               type="number"
+               class="js-input">
+         </div>
+      </div>
+   </div>
+   <button class="js-button">Добавить</button>
+
+   <div class="stats">
+      <div class="stats__limit">
+         <p>Лимит: <span class="js-limit"></span></p>
+      </div>
+      <div class="stats__total">
+         <p>Сумма: <span class="js-sum"></span></p>
+      </div>
+      <div class="stats__status">
+         <p>Статус: <span class="js-status status"></span></p>
+      </div>
+   </div>
+
+   <h2>История</h2>
+   <div class="js-history">
+
+   </div>
+
+   <script src="index.js"></script>
 </body>
 </html>
