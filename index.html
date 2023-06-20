@@ -4,39 +4,79 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
    <link rel="shortcut icon" href="resources/icon.png" type="image/x-icon">
    <link rel="stylesheet" href="reset.css">
    <link rel="stylesheet" href="index.css">
    <title>Expenses App</title>
 </head>
 <body>
-   <h1>Приложение для учета расходов</h1>
-   <div class="expenses">
-      <div class="expensesInput">
-         <div class="moneyInput rub">
-            <input
-               type="number"
-               class="js-input">
+   <div class="container">
+      <!-- <div class="js-popup popup">
+         <div class="popup__content">
+            <h3 class="popup__title">Новый лимит</h3>
+            <div class="popup__close-btn"></div>
+            <div class="popup__box">
+               <div class="popup__box-input rub">
+                  <input
+                     id="expenseInpu"
+                     class="popup__input"
+                     type="number"
+                     min="1"
+                  />
+               </div>
+               <button class="popup__box-btn addButton">Задать лимит</button>
+            </div>
          </div>
+      </div> -->
+      <h1>Учет расходов</h1>
+      <div class="expenses">
+         <div class="expensesInput">
+            <div class="moneyInput rub">
+               <input
+                  id="expenseInput"
+                  class="moneyInput__input"
+                  type="number"
+                  min="1"
+               />
+            </div>
+            <select id="categorySelect" class="categorySelect">
+               <option hidden disabled selected value="Категория">Категория</option>
+               <option value="Продукты">Продукты</option>
+               <option value="Кафе">Кафе и рестораны</option>
+               <option value="Квартира">Квартира</option>
+               <option value="Авто">Авто</option>
+            </select>
+         </div>
+         <button class="addButton" id="addButton">Добавить</button>
+         <div class="stats">
+            <div class="stats__limit">
+               <span class="label">Лимит:</span>
+               <span id="limitValue" class="rub">1000</span>
+               <img
+                  id="changeLimitBtn"
+                  class="stats_changeLimitBtn"
+                  src="resources/pencil-icon.png"
+                  alt="иконка смены лимита">
+            </div>
+            <div class="stats__total">
+               <span class="label">Всего:</span>
+               <span id="totalValue" class="rub">0</span>
+            </div>
+            <div class="stats__status">
+               <span class="label">Статус:</span>
+               <span id="statusText" class="stats__statusText_positive">все хорошо</span>
+            </div>
+            <button class="clearButton" id="clearButton">Сбросить расходы</button>
+         </div>
+         <div class="history">
+            <div class="history__title label">История</div>
+            <ol class="history__list" id="historyList"></ol>
+         </div>
+         
       </div>
-   </div>
-   <button class="js-button">Добавить</button>
-
-   <div class="stats">
-      <div class="stats__limit">
-         <p>Лимит: <span class="js-limit"></span></p>
-      </div>
-      <div class="stats__total">
-         <p>Сумма: <span class="js-sum"></span></p>
-      </div>
-      <div class="stats__status">
-         <p>Статус: <span class="js-status status"></span></p>
-      </div>
-   </div>
-
-   <h2>История</h2>
-   <div class="js-history">
-
    </div>
 
    <script src="index.js"></script>
