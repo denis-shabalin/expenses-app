@@ -12,8 +12,8 @@ const limitInputNode = document.getElementById('limitInput');
 const popup = document.getElementById('popup');
 const limitNode = document.getElementById('limitValue');
 
-const STATUS_IN_LIMIT = 'все хорошо';
-const STATUS_OUT_OF_LIMIT = 'все плохо';
+const STATUS_IN_LIMIT = 'Все хорошо';
+const STATUS_OUT_OF_LIMIT = 'Все плохо';
 const STORAGE_LABEL_LIMIT = 'limit';
 const STORAGE_LABEL_EXPENSES = 'expenses';
 
@@ -52,7 +52,7 @@ function renderStatus() {
    const total = getTotal(expenses);
    totalValueNode.innerText = total;
    if (total <= limit) {
-      statusNode.innerText = STATUS_IN_LIMIT;
+      statusNode.innerText = `${STATUS_IN_LIMIT}. Осталось ${limit - total} руб.`;
       statusNode.className = 'stats__statusText_positive';
    } else {
       statusNode.innerText = `${STATUS_OUT_OF_LIMIT} (${limit - total} руб)`;
