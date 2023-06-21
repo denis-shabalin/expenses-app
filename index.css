@@ -141,7 +141,6 @@ ol {
    color: red;
 }
 
-/* --------------POPUP--------------------- */
 .popup {
    position: fixed;
    top: 0;
@@ -152,8 +151,9 @@ ol {
    justify-content: center;
    align-items: center;
    background-color: rgba(0, 0, 0, 0.6);
-   opacity: 0;
    transition: all 0.5s ease;
+   opacity: 0;
+   visibility: hidden;
 }
 
 .popup__content {
@@ -199,7 +199,6 @@ ol {
    padding: 10px 17px 9px 22px;
    border: 1px solid #000;
 }
-
 
 .popup__input {
    width: 100%;
